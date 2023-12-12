@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "537196780113",
+    "project_id": "c323bonusreminders",
+    "storage_bucket": "c323bonusreminders.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537196780113:android:e91213904a6b953117b670",
+        "android_client_info": {
+          "package_name": "c322.bonus.Reminders"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-wAJjcxsvOipm8JMoho-p6DeIsB5A9Hw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537196780113:android:212ec508ce25ce3917b670",
+        "android_client_info": {
+          "package_name": "com.example.c322bonusreminders"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-wAJjcxsvOipm8JMoho-p6DeIsB5A9Hw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".EditReminderFragment">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.c322bonusreminders.ReminderViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".1"
+            android:id="@+id/etTitle"
+            android:inputType="text"
+            android:text="@={viewModel.reminder.remindName}"
+            android:hint="Title"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".8"
+            android:id="@+id/etDescription"
+            android:inputType="text"
+            android:text="@={viewModel.reminder.remindDescription}"
+            android:hint="Description"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".2"
+            android:orientation="horizontal">
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:layout_margin="5dp"
+                android:timePickerMode="spinner" />
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:layout_margin="4dp"
+                android:datePickerMode="spinner"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

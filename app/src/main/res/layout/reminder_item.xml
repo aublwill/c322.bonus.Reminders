@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="reminder"
+            type="com.example.c322bonusreminders.Reminder" />
+        <variable
+            name="viewModel"
+            type="com.example.c322bonusreminders.ReminderViewModel" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/remindName"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@{reminder.remindName}"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/remindDescription"
+                app:layout_constraintEnd_toStartOf="@+id/deleteRemind"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/deleteRemind"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="1dp"
+                android:onClick="@{()->viewModel.deleteReminder()"
+                android:src="@drawable/delete"
+                app:layout_constraintBottom_toTopOf="@+id/remindTimeDate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/remindName"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/remindDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{reminder.remindDescription}"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/remindTimeDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/remindName" />
+
+            <TextView
+                android:id="@+id/remindTimeDate"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="1dp"
+                android:text="@{reminder.remindDate + reminder.remindTime}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/remindDescription"
+                app:layout_constraintTop_toBottomOf="@+id/deleteRemind" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>
